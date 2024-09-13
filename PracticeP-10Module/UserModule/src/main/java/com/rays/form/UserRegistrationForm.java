@@ -1,0 +1,75 @@
+package com.rays.form;
+
+import java.util.Date;
+
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+
+import com.rays.common.BaseForm;
+
+public class UserRegistrationForm extends BaseForm {
+	@NotEmpty(message = "firstName is required")
+	private String firstName;
+	@NotEmpty(message = "lastname is required")
+	private String lastName;
+	@NotEmpty(message = "login ID is required")
+	private String loginId;
+	@NotEmpty(message = "password is required")
+	private String password;
+    @NotNull
+	private Date dob;
+	@NotEmpty(message = "mobileno is required")
+	private String mobileNo;
+
+	public UserRegistrationForm() {
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public String getLoginId() {
+		return loginId;
+	}
+
+	public void setLoginId(String loginId) {
+		this.loginId = loginId;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public Date getDob() {
+		return dob;
+	}
+
+	public void setDob(Date dob) {
+		this.dob = dob;
+	}
+
+	public String getMobileNo() {
+		return mobileNo;
+	}
+
+	public void setMobileNo(String mobileNo) {
+		this.mobileNo = mobileNo;
+	}
+
+}
